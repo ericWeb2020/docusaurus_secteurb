@@ -1,0 +1,9 @@
+{
+  "label": "Procédure d'utilisation",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+	"description": "Cette section explique la navigation sur le site des entreprises Michaud et fils.",
+	"slug": "/utilisation"
+  }
+}

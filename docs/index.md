@@ -5,8 +5,8 @@ sidebar_position: 1
 ---
 # Bonjour,
 
-Je vous souhaite la bienvenue dans la grande famille des **Entrepôts 6R1**.
+Bienvenue sur la documentation du site de Michaud et fils.
+Veuillez parcourir l'onglet à gauche afin d'accéder à l'information désirée.
 
-Les nouveaux membres de l'équipe **Maintenance - Secteur B** sont **Béatrice Hardy** et **Bernard Cool**.
+Programmeurs de l'équipe : **Eric Forget - Marie-Christine - Alec Maltais - Philipe Lizotte**.
 
-**Marco Drouin**

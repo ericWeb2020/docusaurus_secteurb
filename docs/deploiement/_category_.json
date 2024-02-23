@@ -1,0 +1,9 @@
+{
+  "label": "Procédure de déploiement",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+	"description": "Cette section explique la procédure pour déployer le site des entreprises Michaud et fils.",
+	"slug": "/deploiement"
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "label": "Système d'exploitation",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-	"description": "Cette section explique des fonctionnalités sur le système d'exploitation.",
-	"slug": "/os"
-  }
-}

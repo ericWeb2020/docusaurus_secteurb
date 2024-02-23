@@ -1,9 +1,0 @@
-{
-  "label": "La suite Office",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-	"description": "Cette section explique des fonctionnalités inclues dans la suite Office.",
-	"slug": "/office"
-  }
-}

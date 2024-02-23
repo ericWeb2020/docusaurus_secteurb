@@ -8,20 +8,20 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Entrepôt 6R1',
-  tagline: 'Dinosaurs are cool',
+  title: 'Entreprises Michaud et fils',
+  tagline: '',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://github.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/docusaurus_secteurb/',
+  baseUrl: '/docusaurus_michaud/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ericWeb2020', // Usually your GitHub org/user name.
-  projectName: 'docusaurus_secteurb', // Usually your repo name.
+  projectName: 'docusaurus_michaud', // Usually your repo name.
   deploymentBranch: 'gh-pages',
   trailingSlash: true,
   onBrokenLinks: 'throw',
@@ -57,7 +57,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Entrepôts 6R1',
+        title: 'Entreprises Michaud et fils',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -69,7 +69,7 @@ const config = {
         style: 'dark',
         links: [
         ],
-        copyright: `Eric Forget, Alec Maltais - 2024 - 6R1`
+        copyright: `Eric Forget, Alec Maltais, Marie-Christine Marquis - Philippe Lizotte - 2024`
       },
       prism: {
         theme: prismThemes.github,

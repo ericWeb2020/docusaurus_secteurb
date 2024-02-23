@@ -1,0 +1,200 @@
+---
+slug: /deploiement/deploiement-site
+sidebar_position: 1
+title : Déployer le site
+---
+
+**Mise à jour: 20 février 2024**
+
+## Introduction
+
+Dans ce tutoriel, vous retrouverez toutes les étapes pour déployer le site internet 
+Michaud et Fils qui permettera aux clients un accès au site internet.
+
+## Prérequis
+
+Pour déployer le site il faut:
+
+- Un compte [Azure](https://azure.microsoft.com/en-ca/get-started/azure-portal)
+- Obtenir un [courriel](https://accounts.google.com/) valide.
+- [PostgreSQL](https://www.postgresql.org/)(celui du site internet de Michaud et fils).
+- [DataGrip](https://www.jetbrains.com/datagrip/)
+
+
+
+<details open> 
+<summary>test</summary>
+
+This is how you dropdown.
+</details> 
+
+
+Prenez note que la création de compte ne sera pas expliquée dans ce tutoriel. Le tutoriel
+commence sur le site d'[Azure de microsoft](https://azure.microsoft.com/fr-ca/)
+Et que vous êtes connectés avec votre compte. Le début commencera à la page principale.
+
+## Procédure
+
+1. Lorsque vous êtes connectés sur votre compte, aller dans la barre de recherche en haut et tapez
+    "Serveur Azure Database pour PostgreSQL".
+
+2. Ensuite, cliquez sur "Créer Serveur Azure Database pour PostgreSQL".
+
+3. Onglet __de base__,
+  - __Détails du projet__ : 
+    -  Créer un nouveau groupe de ressources (nommé MichaudEtFils pour le projet)
+  - __Détails du serveur__ : 
+    - Donner un nom au serveur : entreprise-Michaud
+    - Région : choisir la région Canada East
+  - Version de PostgreSQL du projet : _16_
+  - Type de charge de travail : 
+    - Choisir l'option développement
+  - __Authentification__ : 
+    - Laisser l'option __Authentification PostgreSQL uniquement__.
+  - Créer un nouvel utilisateur administrateur : 
+    - __utilisateur__ : MichaudEtFils 
+    - __Mot de passe__ : !Deneigement-ete-hiver
+
+4. Ongle Mise en réseau 
+- Sélectionner l'accès public
+  - Cocher __Autoriser l'accès public à partir d'un service Azure dans Azure sur ce serveur__.
+  - Ajouter l'adresse IP actuelle qui es proposée pour créer une règle automatique dans le pare-feu
+:::warning
+L'adresse IP doit être statique pour ne pas avoir à reconfigurer l'adresse permise dans le pare-feu
+:::
+- Attendre le déploiement qui est en cours à cette étape.
+
+5.Informations de connexion
+- Aller dans l'onglet __Accueil__ pour accéder au portail de navigation du site.
+- Cliquer sur entreprise-Michaud
+  -  Vous serez à présent dans la page __Informations__.
+
+6. Se connecter au serveur de base de données:
+- Avec Datagrip:
+  -   Créer une nouvelle connexion à un serveur avec les informations dans l'encadré
+- Avec les informations entrées, vous pouvez tester si la connexion 'a la base de données fonctionne.
+- La base de données devrait être créée avec l'utilisateur __Owner__.
+
+7. __APPS Service pour déployer__.
+- __L'onglet de base__
+  -  __Détails de projet__:
+      -  Abonnement: Azure for students
+      -  Groupe de ressources: MichaudEtFils
+  -  __Détails de l'instance__:
+        -  __Nom__: michaud-et-fils-mvc
+        -  __Publier__: Code
+        -  __Pile d'exécution__: .Net 7.0 (sts)
+        -  __Système d'exploitation__: Windows
+        -  __Région__: US East
+
+- __L'onglet déploiement__
+  - Paramètre GitHub actions
+  - Déploiement continu: __désactiver__
+  - Vérifier les configurations et cliquer sur __Créer__
+
+- Aller sur __Rider__
+
+ - Déploiement du projet MVC.
+   -  Clic droit sur le projet -> Publish -> Azure
+   - Installer le plugin Azure 
+   - Redémarrer l'application __Rider__
+:::note
+Il faut se connecter au compte Azure dans l'onglet Azure explorer pour continuer.
+:::
+- Nous avons maintenant accès au plugin Azure qui permet de déployer le projet MVC. ****
+
+-  Sélectionner __Use Existing Web App__
+
+-  Choisir le projet __MVC__
+-  Cliquez __Apply__ puis __Run__
+
+- Une nouvelle configuration sera disponible dans les configurations en haut de l'écran.
+
+-  Une page web s'affichera avec l'erreur 500.30 __C'est normal!__ Il manque les configurations de connexion à la base de données.
+
+8. Déboguer les erreurs de déploiement
+
+:::note
+La prochaine étape est de Diagnostiguer et résoudre les problèmes.
+:::
+
+- Il y aura des erreurs dans le journal d'événement.
+
+  -  Pour régler l'erreur 1018 :
+    -  Sur le site Azure, dans le dossier MVC -> Paramètres -> Configurations -> Nouvelle chaine de connexion.
+    -  Il faut créer une nouvelle chaine de connexion
+        -  Dans le app.settings.json dans le projet MVC, il y a les informations que nous avons besoin.
+        -  Remplacer le __nom du serveur__, le nom de la Database du serveur Azure, le nom d'utilisateur et le mot de passe de la database sur Azure.
+:::warning
+N'oubliez pas d'__enregistrer__ votre chaine de connexion!
+:::
+
+9. Créer un compte de stockge.
+- Cliquez sur __Créer un compte de stockage__.
+- Assignez un __groupe de ressources__, un __nom__ et une __région__ à votre compte de stockage
+- Conservez toutes les autres options __par défaut__.
+
+10. Créer un partage de fichiers.
+- S'assurez d'être à l'intérieur du compte de stockage.
+- Allez à la section __Partage de fichiers__.
+- Créez un nouveau partage de fichier en appuyant sur __+ Partage de fichiers__. Garder les valeurs par défaut.
+
+11. Monter le stockage
+- Allez dans la section ```Configuration``` du projet MVC.
+- Sélectionnez l'onglet ```Mappages de chemin d'accès```.
+- Sous Monter le stockage, appuyez sur ```+ Nouveau montage de stockage Azure```
+  -  Nom:  Un nom pour identifier le stockage
+  -  Options de configuration: De base
+  -  Comptes de stockage: sélectionnez votre compte créé précédemment
+  -  Conteneur de stockage: votre dossier de fichiers partagé
+  -  Chemin de montage: il s'agit du chemin d'accès virtuel sur le serveur. Le nom n'a pas d'importance, tant que vous en prenez note et réutilisez le bon.
+  -  Appuyer Ok, sauvegarder
+
+12. Créer le répertoire virtuel
+- Sous ```Applications et répertoires virtuels```, appuyez sur ```+ Nouvelle application virtuelle ou nouveau répertoire virtuel```
+- Entrez les paramètres
+  -  Entre le chemin d'accès virtuel ```/storage```
+  -  Entrez le lien vers le stockage monté précédemment ```\mounts\storage```
+  -  Cochez ```Annuaire```
+  -  Appuyer ```OK```
+
+13. Modifier l'application
+
+14. Écriture de fichiers.
+
+15. Installation du AZure powershell. SI l'extionsion UUID n'est pas disponible dans la liste d'extensions.
+- Télécharger Azure CLI
+- Se connecter avec AzAccount
+- Commande à entrer 
+  -   ```az postgres flexible-server parameter set --resource-group MichaudEtfils --server-name entreprise-michaud --subscription 4a84da0d-b1c3-4e60-b263-a2f31b9e7fb2 --name azure.extensions --value uuid-ossp```
+
+<details>
+<summary>Well</summary>
+
+<details>
+<summary>Try this</summary>
+
+ <details>
+ <summary>The other one</summary>
+
+   <details> 
+   <summary>Ok, try this</summary>
+
+   You got me 😂
+   </details>
+ </details>
+</details>
+</details>
+
+
+
+
+
+
+
+
+## Mise à jour du serveur
+
+## Conclusion
+
+Voici ce qui conclut la procédure de déploiement. Vous pouvez maintenant accéder au site déployé à l'adresse x.
