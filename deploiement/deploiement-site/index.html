@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-deploiement/deploiement_site" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.1">
+<title data-rh="true">Déployer le site | Entreprises Michaud et fils</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://github.com/docusaurus_michaud/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://github.com/docusaurus_michaud/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://github.com/docusaurus_michaud/deploiement/deploiement-site/"><meta data-rh="true" property="og:locale" content="fr"><meta data-rh="true" name="docusaurus_locale" content="fr"><meta data-rh="true" name="docsearch:language" content="fr"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Déployer le site | Entreprises Michaud et fils"><meta data-rh="true" name="description" content="Mise à jour: 20 février 2024"><meta data-rh="true" property="og:description" content="Mise à jour: 20 février 2024"><link data-rh="true" rel="icon" href="/docusaurus_michaud/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://github.com/docusaurus_michaud/deploiement/deploiement-site/"><link data-rh="true" rel="alternate" href="https://github.com/docusaurus_michaud/deploiement/deploiement-site/" hreflang="fr"><link data-rh="true" rel="alternate" href="https://github.com/docusaurus_michaud/deploiement/deploiement-site/" hreflang="x-default"><link rel="stylesheet" href="/docusaurus_michaud/assets/css/styles.c1a10ddf.css">
+<script src="/docusaurus_michaud/assets/js/runtime~main.3e4d0d69.js" defer="defer"></script>
+<script src="/docusaurus_michaud/assets/js/main.6bbd79a4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Aller au contenu principal"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Aller au contenu principal</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><a class="navbar__brand" href="/docusaurus_michaud/"><div class="navbar__logo"><img src="/docusaurus_michaud/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/docusaurus_michaud/img/logo.svg" alt="My Site Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Entreprises Michaud et fils</b></a></div><div class="navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Basculer entre le mode sombre et clair (actuellement mode clair)" aria-label="Basculer entre le mode sombre et clair (actuellement mode clair)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Retour au début de la page" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docusaurus_michaud/">Accueil</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docusaurus_michaud/utilisation/">Procédure d&#x27;utilisation</a><button aria-label="Développer la catégorie &#x27;Procédure d&#x27;utilisation&#x27; de la barre latérale" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docusaurus_michaud/deploiement/">Procédure de déploiement</a><button aria-label="Réduire la catégorie &#x27;Procédure de déploiement&#x27; de la barre latérale" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docusaurus_michaud/deploiement/deploiement-site/">Déployer le site</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Fil d&#x27;Ariane"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Page d&#x27;accueil" class="breadcrumbs__link" href="/docusaurus_michaud/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docusaurus_michaud/deploiement/"><span itemprop="name">Procédure de déploiement</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Déployer le site</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">Sur cette page</button></div><div class="theme-doc-markdown markdown"><header><h1>Déployer le site</h1></header><p><strong>Mise à jour: 20 février 2024</strong></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="#introduction" class="hash-link" aria-label="Lien direct vers Introduction" title="Lien direct vers Introduction">​</a></h2>
+<p>Dans ce tutoriel, vous retrouverez toutes les étapes pour déployer le site internet
+Michaud et Fils qui permettera aux clients un accès au site internet.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prérequis">Prérequis<a href="#prérequis" class="hash-link" aria-label="Lien direct vers Prérequis" title="Lien direct vers Prérequis">​</a></h2>
+<p>Pour déployer le site il faut:</p>
+<ul>
+<li>Un compte <a href="https://azure.microsoft.com/en-ca/get-started/azure-portal" target="_blank" rel="noopener noreferrer">Azure</a></li>
+<li>Obtenir un <a href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer">courriel</a> valide.</li>
+<li><a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">PostgreSQL</a>(celui du site internet de Michaud et fils).</li>
+<li><a href="https://www.jetbrains.com/datagrip/" target="_blank" rel="noopener noreferrer">DataGrip</a></li>
+</ul>
+<details open="" class="details_lb9f alert alert--info details_b_Ee" data-collapsed="false"><summary>test</summary><div><div class="collapsibleContent_i85q"><p>This is how you dropdown.</p></div></div></details>
+<p>Prenez note que la création de compte ne sera pas expliquée dans ce tutoriel. Le tutoriel
+commence sur le site d&#x27;<a href="https://azure.microsoft.com/fr-ca/" target="_blank" rel="noopener noreferrer">Azure de microsoft</a>
+Et que vous êtes connectés avec votre compte. Le début commencera à la page principale.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="procédure">Procédure<a href="#procédure" class="hash-link" aria-label="Lien direct vers Procédure" title="Lien direct vers Procédure">​</a></h2>
+<ol>
+<li>
+<p>Lorsque vous êtes connectés sur votre compte, aller dans la barre de recherche en haut et tapez
+&quot;Serveur Azure Database pour PostgreSQL&quot;.</p>
+</li>
+<li>
+<p>Ensuite, cliquez sur &quot;Créer Serveur Azure Database pour PostgreSQL&quot;.</p>
+</li>
+<li>
+<p>Onglet <strong>de base</strong>,</p>
+</li>
+</ol>
+<ul>
+<li><strong>Détails du projet</strong> :<!-- -->
+<ul>
+<li>Créer un nouveau groupe de ressources (nommé MichaudEtFils pour le projet)</li>
+</ul>
+</li>
+<li><strong>Détails du serveur</strong> :<!-- -->
+<ul>
+<li>Donner un nom au serveur : entreprise-Michaud</li>
+<li>Région : choisir la région Canada East</li>
+</ul>
+</li>
+<li>Version de PostgreSQL du projet : <em>16</em></li>
+<li>Type de charge de travail :<!-- -->
+<ul>
+<li>Choisir l&#x27;option développement</li>
+</ul>
+</li>
+<li><strong>Authentification</strong> :<!-- -->
+<ul>
+<li>Laisser l&#x27;option <strong>Authentification PostgreSQL uniquement</strong>.</li>
+</ul>
+</li>
+<li>Créer un nouvel utilisateur administrateur :<!-- -->
+<ul>
+<li><strong>utilisateur</strong> : MichaudEtFils</li>
+<li><strong>Mot de passe</strong> : !Deneigement-ete-hiver</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>Ongle Mise en réseau</li>
+</ol>
+<ul>
+<li>Sélectionner l&#x27;accès public<!-- -->
+<ul>
+<li>Cocher <strong>Autoriser l&#x27;accès public à partir d&#x27;un service Azure dans Azure sur ce serveur</strong>.</li>
+<li>Ajouter l&#x27;adresse IP actuelle qui es proposée pour créer une règle automatique dans le pare-feu</li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>attention</div><div class="admonitionContent_BuS1"><p>L&#x27;adresse IP doit être statique pour ne pas avoir à reconfigurer l&#x27;adresse permise dans le pare-feu</p></div></div>
+<ul>
+<li>Attendre le déploiement qui est en cours à cette étape.</li>
+</ul>
+<p>5.Informations de connexion</p>
+<ul>
+<li>Aller dans l&#x27;onglet <strong>Accueil</strong> pour accéder au portail de navigation du site.</li>
+<li>Cliquer sur entreprise-Michaud<!-- -->
+<ul>
+<li>Vous serez à présent dans la page <strong>Informations</strong>.</li>
+</ul>
+</li>
+</ul>
+<ol start="6">
+<li>Se connecter au serveur de base de données:</li>
+</ol>
+<ul>
+<li>Avec Datagrip:<!-- -->
+<ul>
+<li>Créer une nouvelle connexion à un serveur avec les informations dans l&#x27;encadré</li>
+</ul>
+</li>
+<li>Avec les informations entrées, vous pouvez tester si la connexion &#x27;a la base de données fonctionne.</li>
+<li>La base de données devrait être créée avec l&#x27;utilisateur <strong>Owner</strong>.</li>
+</ul>
+<ol start="7">
+<li><strong>APPS Service pour déployer</strong>.</li>
+</ol>
+<ul>
+<li>
+<p><strong>L&#x27;onglet de base</strong></p>
+<ul>
+<li><strong>Détails de projet</strong>:<!-- -->
+<ul>
+<li>Abonnement: Azure for students</li>
+<li>Groupe de ressources: MichaudEtFils</li>
+</ul>
+</li>
+<li><strong>Détails de l&#x27;instance</strong>:<!-- -->
+<ul>
+<li><strong>Nom</strong>: michaud-et-fils-mvc</li>
+<li><strong>Publier</strong>: Code</li>
+<li><strong>Pile d&#x27;exécution</strong>: .Net 7.0 (sts)</li>
+<li><strong>Système d&#x27;exploitation</strong>: Windows</li>
+<li><strong>Région</strong>: US East</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>L&#x27;onglet déploiement</strong></p>
+<ul>
+<li>Paramètre GitHub actions</li>
+<li>Déploiement continu: <strong>désactiver</strong></li>
+<li>Vérifier les configurations et cliquer sur <strong>Créer</strong></li>
+</ul>
+</li>
+<li>
+<p>Aller sur <strong>Rider</strong></p>
+</li>
+<li>
+<p>Déploiement du projet MVC.</p>
+<ul>
+<li>Clic droit sur le projet -&gt; Publish -&gt; Azure</li>
+<li>Installer le plugin Azure</li>
+<li>Redémarrer l&#x27;application <strong>Rider</strong></li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>remarque</div><div class="admonitionContent_BuS1"><p>Il faut se connecter au compte Azure dans l&#x27;onglet Azure explorer pour continuer.</p></div></div>
+<ul>
+<li>
+<p>Nous avons maintenant accès au plugin Azure qui permet de déployer le projet MVC. ****</p>
+</li>
+<li>
+<p>Sélectionner <strong>Use Existing Web App</strong></p>
+</li>
+<li>
+<p>Choisir le projet <strong>MVC</strong></p>
+</li>
+<li>
+<p>Cliquez <strong>Apply</strong> puis <strong>Run</strong></p>
+</li>
+<li>
+<p>Une nouvelle configuration sera disponible dans les configurations en haut de l&#x27;écran.</p>
+</li>
+<li>
+<p>Une page web s&#x27;affichera avec l&#x27;erreur 500.30 <strong>C&#x27;est normal!</strong> Il manque les configurations de connexion à la base de données.</p>
+</li>
+</ul>
+<ol start="8">
+<li>Déboguer les erreurs de déploiement</li>
+</ol>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>remarque</div><div class="admonitionContent_BuS1"><p>La prochaine étape est de Diagnostiguer et résoudre les problèmes.</p></div></div>
+<ul>
+<li>
+<p>Il y aura des erreurs dans le journal d&#x27;événement.</p>
+<ul>
+<li>Pour régler l&#x27;erreur 1018 :</li>
+<li>Sur le site Azure, dans le dossier MVC -&gt; Paramètres -&gt; Configurations -&gt; Nouvelle chaine de connexion.</li>
+<li>Il faut créer une nouvelle chaine de connexion<!-- -->
+<ul>
+<li>Dans le app.settings.json dans le projet MVC, il y a les informations que nous avons besoin.</li>
+<li>Remplacer le <strong>nom du serveur</strong>, le nom de la Database du serveur Azure, le nom d&#x27;utilisateur et le mot de passe de la database sur Azure.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>attention</div><div class="admonitionContent_BuS1"><p>N&#x27;oubliez pas d&#x27;<strong>enregistrer</strong> votre chaine de connexion!</p></div></div>
+<ol start="9">
+<li>Créer un compte de stockge.</li>
+</ol>
+<ul>
+<li>Cliquez sur <strong>Créer un compte de stockage</strong>.</li>
+<li>Assignez un <strong>groupe de ressources</strong>, un <strong>nom</strong> et une <strong>région</strong> à votre compte de stockage</li>
+<li>Conservez toutes les autres options <strong>par défaut</strong>.</li>
+</ul>
+<ol start="10">
+<li>Créer un partage de fichiers.</li>
+</ol>
+<ul>
+<li>S&#x27;assurez d&#x27;être à l&#x27;intérieur du compte de stockage.</li>
+<li>Allez à la section <strong>Partage de fichiers</strong>.</li>
+<li>Créez un nouveau partage de fichier en appuyant sur <strong>+ Partage de fichiers</strong>. Garder les valeurs par défaut.</li>
+</ul>
+<ol start="11">
+<li>Monter le stockage</li>
+</ol>
+<ul>
+<li>Allez dans la section <code>Configuration</code> du projet MVC.</li>
+<li>Sélectionnez l&#x27;onglet <code>Mappages de chemin d&#x27;accès</code>.</li>
+<li>Sous Monter le stockage, appuyez sur <code>+ Nouveau montage de stockage Azure</code>
+<ul>
+<li>Nom:  Un nom pour identifier le stockage</li>
+<li>Options de configuration: De base</li>
+<li>Comptes de stockage: sélectionnez votre compte créé précédemment</li>
+<li>Conteneur de stockage: votre dossier de fichiers partagé</li>
+<li>Chemin de montage: il s&#x27;agit du chemin d&#x27;accès virtuel sur le serveur. Le nom n&#x27;a pas d&#x27;importance, tant que vous en prenez note et réutilisez le bon.</li>
+<li>Appuyer Ok, sauvegarder</li>
+</ul>
+</li>
+</ul>
+<ol start="12">
+<li>Créer le répertoire virtuel</li>
+</ol>
+<ul>
+<li>Sous <code>Applications et répertoires virtuels</code>, appuyez sur <code>+ Nouvelle application virtuelle ou nouveau répertoire virtuel</code></li>
+<li>Entrez les paramètres<!-- -->
+<ul>
+<li>Entre le chemin d&#x27;accès virtuel <code>/storage</code></li>
+<li>Entrez le lien vers le stockage monté précédemment <code>\mounts\storage</code></li>
+<li>Cochez <code>Annuaire</code></li>
+<li>Appuyer <code>OK</code></li>
+</ul>
+</li>
+</ul>
+<ol start="13">
+<li>
+<p>Modifier l&#x27;application</p>
+</li>
+<li>
+<p>Écriture de fichiers.</p>
+</li>
+<li>
+<p>Installation du AZure powershell. SI l&#x27;extionsion UUID n&#x27;est pas disponible dans la liste d&#x27;extensions.</p>
+</li>
+</ol>
+<ul>
+<li>Télécharger Azure CLI</li>
+<li>Se connecter avec AzAccount</li>
+<li>Commande à entrer<!-- -->
+<ul>
+<li><code>az postgres flexible-server parameter set --resource-group MichaudEtfils --server-name entreprise-michaud --subscription 4a84da0d-b1c3-4e60-b263-a2f31b9e7fb2 --name azure.extensions --value uuid-ossp</code></li>
+</ul>
+</li>
+</ul>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Well</summary><div><div class="collapsibleContent_i85q"><details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Try this</summary><div><div class="collapsibleContent_i85q"><details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>The other one</summary><div><div class="collapsibleContent_i85q"><details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Ok, try this</summary><div><div class="collapsibleContent_i85q"><p>You got me 😂</p></div></div></details></div></div></details></div></div></details></div></div></details>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mise-à-jour-du-serveur">Mise à jour du serveur<a href="#mise-à-jour-du-serveur" class="hash-link" aria-label="Lien direct vers Mise à jour du serveur" title="Lien direct vers Mise à jour du serveur">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="#conclusion" class="hash-link" aria-label="Lien direct vers Conclusion" title="Lien direct vers Conclusion">​</a></h2>
+<p>Voici ce qui conclut la procédure de déploiement. Vous pouvez maintenant accéder au site déployé à l&#x27;adresse x.</p></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Pages de documentation"><a class="pagination-nav__link pagination-nav__link--prev" href="/docusaurus_michaud/deploiement/"><div class="pagination-nav__sublabel">Précédent</div><div class="pagination-nav__label">Procédure de déploiement</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction" class="table-of-contents__link toc-highlight">Introduction</a></li><li><a href="#prérequis" class="table-of-contents__link toc-highlight">Prérequis</a></li><li><a href="#procédure" class="table-of-contents__link toc-highlight">Procédure</a></li><li><a href="#mise-à-jour-du-serveur" class="table-of-contents__link toc-highlight">Mise à jour du serveur</a></li><li><a href="#conclusion" class="table-of-contents__link toc-highlight">Conclusion</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Eric Forget, Alec Maltais, Marie-Christine Marquis - Philippe Lizotte - 2024</div></div></div></footer></div>
+</body>
+</html>
